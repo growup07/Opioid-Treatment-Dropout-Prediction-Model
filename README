@@ -1,0 +1,39 @@
+📝 Overview
+Predicting treatment retention is critical for healthcare outcomes. This project builds a binary classification model to predict whether a patient undergoing treatment for Opioid Use Disorder (OUD) will end their episode in a DROPOUT. This helps providers identify high-risk individuals and potentially intervene early.
+
+🧰 Tech Stack & Dependencies
+Python 3.x: Core programming language.
+
+Scikit-Learn: Used for creating flexible pipelines, hyperparameter tuning via GridSearchCV, and model evaluation.
+
+XGBoost: A gradient-boosted decision tree algorithm used to achieve high predictive accuracy.
+
+TensorFlow/Keras: For exploring deep learning performance on patient data.
+
+Matplotlib: For visualizing feature importance and subgroup performance disparities.
+
+🛠️ Installation & Setup
+Clone the repository:
+
+Bash
+git clone [your-repo-url]
+cd [your-repo-folder]
+Install dependencies:
+
+Bash
+pip install pandas numpy matplotlib scikit-learn xgboost tensorflow
+🚀 Usage
+Run the script:
+
+Bash
+python MIS548_Project_Problem2_OUD.py
+Results: The script runs a comparative analysis between the Logistic Regression baseline, a tuned XGBoost model, and a Neural Network, outputting the best-performing model's results.
+
+Subgroup Analysis: Review the printed tables to check model performance across demographic subgroups (e.g., Age, Race, Gender).
+
+🧠 How It Works
+Tuning: Employs GridSearchCV to optimize the XGBoost model by iterating through parameters like max_depth and learning_rate.
+
+Feature Engineering: One-hot encoding and imputation are applied to handle heterogeneous patient data types.
+
+Fairness Check: Includes a specific subgroup_auc_table function to verify that the model performs consistently across different patient populations, ensuring equitable predictive power.
